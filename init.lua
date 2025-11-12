@@ -22,7 +22,7 @@ require('packer').startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'dracula/vim', config = function() vim.cmd 'colorscheme dracula' end }
+  use { 'navarasu/onedark.nvim', config = function() vim.cmd 'colorscheme onedark' end }
 end)
 
 -- LSP on_attach
