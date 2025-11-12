@@ -5,6 +5,9 @@ vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
 vim.opt.clipboard = 'unnamedplus'
 
+-- Clear search highlights on Esc
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 -- Bootstrap packer
 local packer_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(packer_path)) > 0 then
