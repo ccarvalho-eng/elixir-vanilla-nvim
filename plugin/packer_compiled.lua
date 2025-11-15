@@ -74,20 +74,70 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["mason-lspconfig.nvim"] = {
+  ["Comment.nvim"] = {
     loaded = true,
-    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["mason.nvim"] = {
+  LuaSnip = {
     loaded = true,
-    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["nvim-lspconfig"] = {
+  ["claudecode.nvim"] = {
     loaded = true,
-    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/claudecode.nvim",
+    url = "https://github.com/coder/claudecode.nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["elixir-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/elixir-tools.nvim",
+    url = "https://github.com/elixir-tools/elixir-tools.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -104,6 +154,31 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/cristiano-carvalho/.local/share/nvim-vanilla/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   }
 }
 
