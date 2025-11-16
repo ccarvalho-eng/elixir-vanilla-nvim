@@ -17,13 +17,22 @@ end
 require('packer').startup(require('plugins'))
 
 -- Setup plugin configurations
-require('plugins.lsp').setup()
-require('plugins.treesitter').setup()
-require('plugins.gitsigns').setup()
-require('plugins.telescope').setup()
-require('plugins.telescope').keymaps()
-require('plugins.cmp').setup()
-require('plugins.editor').setup()
+local plugins = {
+  'lsp',
+  'treesitter',
+  'gitsigns',
+  'telescope',
+  'cmp',
+  'editor',
+}
 
--- Load autocmds
-require('config.autocmds')
+for _, plugin in ipairs(plugins) do
+  local ok, module = pcall(require, 'plugins.' .. plugin)
+  if ok then
+    if module.setup then module.setup() end
+    if module.keymaps then module.keymaps() end
+  end
+end
+
+-- Load filetype configurations
+require('config.filetype')

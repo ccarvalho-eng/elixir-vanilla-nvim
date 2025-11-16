@@ -1,74 +1,51 @@
-# Elixir Vanilla Neovim
+# Vanilla Neovim
 
-Minimal Neovim configuration optimized for Elixir development with modern tooling.
+Minimal Neovim configuration optimized for Elixir development with modern tooling and AI assistance.
 
 ## Features
 
-### Core
-- **LSP support** - ElixirLS via elixir-tools.nvim with Dialyzer and test lenses
-- **Format on save** - Automatic `mix format` when saving Elixir files
-- **Smart completion** - nvim-cmp with LSP, buffer, path, and snippet sources
-- **Syntax highlighting** - Treesitter for Elixir, HEEx, EEx, Lua, Vim
-
-### Git Integration
-- **Gitsigns** - Git changes in sign column, inline blame, hunk operations
-- **Fugitive** - Full Git integration (`:Git`, `:Gdiffsplit`, etc.)
-- **LazyGit** - Terminal UI for Git operations
-
-### Editor Enhancements
-- **Telescope** - Fuzzy finder for files, grep, LSP symbols
-- **Comment.nvim** - Smart commenting with `gcc` and `gc`
-- **nvim-autopairs** - Auto-close brackets and quotes
-- **nvim-surround** - Easy surround editing (`ys`, `cs`, `ds`)
-
-### Testing
-- **vim-test** - Sophisticated test runner with multiple strategies
-- **IEx integration** - Built-in terminal launcher
+- **LSP** - ElixirLS with Dialyzer, test lenses, format-on-save
+- **Completion** - nvim-cmp with LSP, buffer, path, and snippets
+- **Git** - Gitsigns, Fugitive, LazyGit integration
+- **Fuzzy Finder** - Telescope with FZF native
+- **Testing** - vim-test + IEx terminal integration
+- **AI** - Claude Code integration with diff support
+- **Editor** - Auto-pairs, surround, smart commenting, Treesitter
 
 ## Keymaps
 
-### LSP (Elixir files)
+Leader key: `<space>`
+
+### LSP (Elixir buffers)
 | Key | Action |
 |-----|--------|
 | `gd` | Go to definition |
-| `gr` | Go to references |
-| `K` | Hover documentation |
-| `<space>rn` | Rename symbol |
-| `<space>f` | Format buffer |
-| `<space>ca` | Code action |
+| `gr` | References |
+| `K` | Hover docs |
+| `<space>rn` | Rename |
+| `<space>f` | Format |
+| `<space>la` | Code action |
 
 ### Telescope
 | Key | Action |
 |-----|--------|
 | `<space>ff` | Find files |
 | `<space>fg` | Live grep |
-| `<space>fb` | Find buffers |
-| `<space>fh` | Help tags |
-| `<space>fs` | LSP document symbols |
-| `<space>fr` | LSP references |
+| `<space>fb` | Buffers |
+| `<space>fh` | Help |
+| `<space>fs` | Symbols |
+| `<space>fr` | References |
 
-### Git (Gitsigns)
+### Git
 | Key | Action |
 |-----|--------|
-| `]c` | Next hunk |
-| `[c` | Previous hunk |
-| `<space>hs` | Stage hunk |
-| `<space>hr` | Reset hunk |
-| `<space>hS` | Stage buffer |
-| `<space>hR` | Reset buffer |
+| `]c` / `[c` | Next/prev hunk |
+| `<space>hs` / `<space>hr` | Stage/reset hunk |
 | `<space>hp` | Preview hunk |
 | `<space>hb` | Blame line |
-| `<space>hd` | Diff this |
-
-### Git (Fugitive & LazyGit)
-| Key | Action |
-|-----|--------|
-| `<space>gg` | Open LazyGit |
+| `<space>gg` | LazyGit |
 | `<space>gs` | Git status |
-| `<space>gc` | Git commit |
-| `<space>gp` | Git push |
-| `<space>gl` | Git log |
-| `<space>gd` | Git diff split |
+| `<space>gd` | Diff split |
 
 ### Testing
 | Key | Action |
@@ -77,32 +54,31 @@ Minimal Neovim configuration optimized for Elixir development with modern toolin
 | `<space>tf` | Test file |
 | `<space>ts` | Test suite |
 | `<space>tl` | Test last |
-| `<space>tv` | Test visit |
+| `<space>i` | IEx terminal |
 
-### Elixir-specific
+### Claude Code
 | Key | Action |
 |-----|--------|
-| `<space>i` | Open IEx terminal |
-| `<Ctrl-l>` | Insert pipe operator `\|>` (insert mode) |
+| `<space>ac` | Toggle Claude |
+| `<space>af` | Focus Claude |
+| `<space>ar` | Resume session |
+| `<space>aC` | Continue session |
+| `<space>am` | Select model |
+| `<space>ab` | Add buffer |
+| `<space>as` | Send selection (visual) |
+| `<space>aa` | Accept diff |
+| `<space>ad` | Reject diff |
 
-### Completion
-| Key | Action |
-|-----|--------|
-| `<Tab>` | Next completion / expand snippet |
-| `<S-Tab>` | Previous completion / jump back |
-| `<CR>` | Confirm selection |
-| `<C-Space>` | Trigger completion |
-
-### Commenting
-| Key | Action |
-|-----|--------|
-| `gcc` | Toggle line comment |
-| `gc` | Toggle comment (visual/motion) |
+### Editing
+- `gcc` / `gc` - Toggle comment
+- `<Tab>` / `<S-Tab>` - Navigate completion
+- `<C-l>` - Insert `|>` (insert mode)
 
 ## Installation
 
 ```bash
-git clone git@github.com:ccarvalho-eng/elixir-vanilla-nvim.git ~/.config/nvim
+git clone <repo-url> ~/.config/nvim-vanilla
+nvim  # Plugins install automatically on first launch
 ```
 
-First launch will automatically install plugins via Packer. Run `:PackerSync` to install all plugins.
+Run `:PackerSync` to update plugins.
