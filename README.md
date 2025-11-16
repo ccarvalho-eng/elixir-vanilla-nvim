@@ -77,7 +77,7 @@ Leader key: `<space>`
 ## Installation
 
 ```bash
-git clone <repo-url> ~/.config/nvim-vanilla
+git clone <repo-url> ~/.config/nvim
 nvim  # Plugins install automatically on first launch
 ```
 
